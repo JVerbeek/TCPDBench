@@ -6,3 +6,6 @@
 	path = execs/python/rbocpdms
 	url = https://github.com/GjjvdBurg/rbocpdms
 	branch = fixes
+[submodule "execs/python/adaga"]
+	path = execs/python/adaga
+	url = https://github.com/lasgroup/adaga.git
