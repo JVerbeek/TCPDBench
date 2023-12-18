@@ -123,13 +123,19 @@ Note that this repository contains all the result files, so it is not
 necessary to redo all the experiments. If you still wish to do so, the 
 instructions are as follows:
 
-1. Move the current result directory out of the way:
+0. Add `abed_results` and `old_abed_results` to the `.gitignore`:
+   
+   ``` $ echo "abed_results/**" >> .gitignore && echo "old_abed_results/**" >> .gitignore
+   $ git add .
+   $ git commit -m "Updated .gitignore to prevent large amounts of paths being updated" ```
+
+2. Move the current result directory out of the way:
 
    ```
    $ mv abed_results old_abed_results
    ```
 
-2. Install [abed](https://github.com/GjjvdBurg/abed). This requires an 
+3. Install [abed](https://github.com/GjjvdBurg/abed). This requires an 
    existing installation of openmpi, but otherwise should be a matter of 
    running:
 
@@ -137,7 +143,7 @@ instructions are as follows:
    $ pip install 'abed>=0.1.3'
    ```
 
-3. Tell abed to rediscover all the tasks that need to be done:
+4. Tell abed to rediscover all the tasks that need to be done:
 
    ```
    $ abed reload_tasks
@@ -151,7 +157,7 @@ instructions are as follows:
    $ abed status
    ```
 
-4. Initialize the virtual environments for Python and R, which installs all 
+5. Initialize the virtual environments for Python and R, which installs all 
    required dependencies:
 
    ```
@@ -164,7 +170,7 @@ instructions are as follows:
    installed. This step can take a little while (:coffee:), but is important 
    to ensure reproducibility.
 
-5. Run abed through ``mpiexec``, as follows:
+6. Run abed through ``mpiexec``, as follows:
 
    ```
    $ mpiexec -np 4 abed local
