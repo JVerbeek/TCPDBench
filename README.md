@@ -125,7 +125,8 @@ instructions are as follows:
 
 0. Add `abed_results` and `old_abed_results` to the `.gitignore`:
    
-   ``` $ echo "abed_results/**" >> .gitignore && echo "old_abed_results/**" >> .gitignore
+   ```
+   $ echo "abed_results/**" >> .gitignore && echo "old_abed_results/**" >> .gitignore
    $ git add .
    $ git commit -m "Updated .gitignore to prevent large amounts of paths being updated" ```
 
