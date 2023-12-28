@@ -1,3 +1,6 @@
 */__pycache__/
 *.pyc
 datasets/
+old_abed_results/**
+abed_results/**
+analysis/**

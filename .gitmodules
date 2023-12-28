@@ -1,3 +1,9 @@
 [submodule "execs/python/adaga"]
 	path = execs/python/adaga
 	url = https://github.com/lasgroup/adaga.git
+[submodule "execs/python/bocpdms"]
+	path = execs/python/bocpdms
+	url = https://github.com/GjjvdBurg/bocpdms.git
+[submodule "execs/python/rbocpdms"]
+	path = execs/python/rbocpdms
+	url = https://github.com/GjjvdBurg/rbocpdms.git
