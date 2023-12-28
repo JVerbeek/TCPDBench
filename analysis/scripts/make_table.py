@@ -15,6 +15,7 @@ License: See the LICENSE file.
 
 import argparse
 import json
+import os
 
 from typing import List
 
@@ -66,13 +67,13 @@ def write_latex(results: List[Result]):
     datasets = sorted(set(r.dataset.name for r in results))
 
     qc_datasets = [d.name for d in list(QC_DATASETS)]
-    multi_datasets = [d.name for d in MULTIDATASETS]
+    multi_datasets = [d.name for d in MULTIDATASETS] if MULTIDATASETS else []
     uni_datasets = [d.name for d in UNIDATASETS if not d in QC_DATASETS]
     datasets = (
         sorted(uni_datasets) + sorted(qc_datasets) + sorted(multi_datasets)
     )
     first_qc = sorted(qc_datasets)[0]
-    first_multi = sorted(multi_datasets)[0]
+    first_multi = sorted(multi_datasets)[0] if multi_datasets else []
 
     textsc = lambda m: "\\textsc{%s}" % m
     verb = lambda m: "\\verb+%s+" % m
@@ -80,12 +81,13 @@ def write_latex(results: List[Result]):
     headers = ["Dataset"] + list(map(textsc, methods))
 
     table = []
-    for dataset in datasets:
+    for dataset in os.listdir("abed_results/"):
         row = [verb(dataset)]
         d = Dataset(dataset)
 
         for method in methods:
             m = Method(method)
+            print(m, d)
             r = next((r for r in results if r.method == m and r.dataset == d))
             row.append(r.placeholder if r.score is None else r.score)
 

@@ -27,48 +27,49 @@ from metrics import f_measure
 
 
 class Dataset(enum.Enum):
-    apple = "apple"
-    bank = "bank"
-    bee_waggle_6 = "bee_waggle_6"
-    bitcoin = "bitcoin"
-    brent_spot = "brent_spot"
-    businv = "businv"
-    centralia = "centralia"
-    children_per_woman = "children_per_woman"
-    co2_canada = "co2_canada"
+    # apple = "apple"
+    # bank = "bank"
+    # bee_waggle_6 = "bee_waggle_6"
+    # bitcoin = "bitcoin"
+    # brent_spot = "brent_spot"
+    # businv = "businv"
+    # centralia = "centralia"
+    # children_per_woman = "children_per_woman"
+    # co2_canada = "co2_canada"
     construction = "construction"
-    debt_ireland = "debt_ireland"
-    gdp_argentina = "gdp_argentina"
-    gdp_croatia = "gdp_croatia"
-    gdp_iran = "gdp_iran"
-    gdp_japan = "gdp_japan"
-    global_co2 = "global_co2"
-    homeruns = "homeruns"
-    iceland_tourism = "iceland_tourism"
-    jfk_passengers = "jfk_passengers"
-    lga_passengers = "lga_passengers"
-    nile = "nile"
-    occupancy = "occupancy"
-    ozone = "ozone"
-    quality_control_1 = "quality_control_1"
+    # debt_ireland = "debt_ireland"
+    # gdp_argentina = "gdp_argentina"
+    # gdp_croatia = "gdp_croatia"
+    # gdp_iran = "gdp_iran"
+    # gdp_japan = "gdp_japan"
+    # global_co2 = "global_co2"
+    # homeruns = "homeruns"
+    heart_rate = "heart_rate"
+    # iceland_tourism = "iceland_tourism"
+    # jfk_passengers = "jfk_passengers"
+    # lga_passengers = "lga_passengers"
+    # nile = "nile"
+    # occupancy = "occupancy"
+    # ozone = "ozone"
+    # quality_control_1 = "quality_control_1"
     quality_control_2 = "quality_control_2"
     quality_control_3 = "quality_control_3"
     quality_control_4 = "quality_control_4"
-    quality_control_5 = "quality_control_5"
-    rail_lines = "rail_lines"
-    ratner_stock = "ratner_stock"
-    robocalls = "robocalls"
-    run_log = "run_log"
-    scanline_126007 = "scanline_126007"
-    scanline_42049 = "scanline_42049"
-    seatbelts = "seatbelts"
+    # quality_control_5 = "quality_control_5"
+    # rail_lines = "rail_lines"
+    # ratner_stock = "ratner_stock"
+    # robocalls = "robocalls"
+    # run_log = "run_log"
+    # scanline_126007 = "scanline_126007"
+    # scanline_42049 = "scanline_42049"
+    # seatbelts = "seatbelts"
     shanghai_license = "shanghai_license"
-    uk_coal_employ = "uk_coal_employ"
-    measles = "measles"
+    # uk_coal_employ = "uk_coal_employ"
+    # measles = "measles"
     unemployment_nl = "unemployment_nl"
-    us_population = "us_population"
-    usd_isk = "usd_isk"
-    well_log = "well_log"
+    # us_population = "us_population"
+    # usd_isk = "usd_isk"
+    # well_log = "well_log"
 
 
 class Dimensionality(enum.Enum):
@@ -82,18 +83,19 @@ class Experiment(enum.Enum):
 
 
 class Method(enum.Enum):
+    adaga= "adaga"
     amoc = "amoc"
     binseg = "binseg"
     bocpd = "bocpd"
     bocpdms = "bocpdms"
-    cpnp = "cpnp"
-    ecp = "ecp"
-    kcpa = "kcpa"
+    # cpnp = "cpnp"
+    # ecp = "ecp"
+    # kcpa = "kcpa"
     pelt = "pelt"
-    prophet = "prophet"
+    # prophet = "prophet"
     rbocpdms = "rbocpdms"
-    rfpop = "rfpop"
-    segneigh = "segneigh"
+    # rfpop = "rfpop"
+    # segneigh = "segneigh"
     wbs = "wbs"
     zero = "zero"
 
@@ -125,39 +127,39 @@ class Result:
 MULTIMETHODS = (
     Method.bocpd,
     Method.bocpdms,
-    Method.ecp,
-    Method.kcpa,
+    # Method.ecp,
+    # Method.kcpa,
     Method.rbocpdms,
     Method.zero,
 )
 
 # Multidimensional datasets
 MULTIDATASETS = (
-    Dataset.apple,
-    Dataset.bee_waggle_6,
-    Dataset.occupancy,
-    Dataset.run_log,
+    # Dataset.apple,
+    # Dataset.bee_waggle_6,
+    # Dataset.occupancy,
+    # Dataset.run_log,
 )
 UNIDATASETS = tuple(d for d in list(Dataset) if not d in MULTIDATASETS)
 QC_DATASETS = (
-    Dataset.quality_control_1,
+    # Dataset.quality_control_1,
     Dataset.quality_control_2,
     Dataset.quality_control_3,
     Dataset.quality_control_4,
-    Dataset.quality_control_5,
+    # Dataset.quality_control_5,
 )
 
 # Methods that handle missing values
 MISSING_METHODS = (
     Method.bocpdms,
-    Method.ecp,
-    Method.kcpa,
-    Method.prophet,
+    # Method.ecp,
+    # Method.kcpa,
+    # Method.prophet,
     Method.zero,
 )
 
 # Datasets with missing values
-MISSING_DATASETS = (Dataset.uk_coal_employ,)
+MISSING_DATASETS = ()#Dataset.uk_coal_employ,)
 
 
 def load_score_file(
@@ -319,13 +321,13 @@ def filter_scores(
     elif missing_strategy == MissingStrategy.zero_no_coal:
         new_scores = {}
         for d in scores:
-            if d == Dataset.uk_coal_employ:
-                warning(
-                    "Warning: Filtering out dataset %r due to "
-                    "incomplete results for some detectors on %r experiment.\n"
-                    % (d, experiment.name)
-                )
-                continue
+            # if d == Dataset.uk_coal_employ:
+            #     warning(
+            #         "Warning: Filtering out dataset %r due to "
+            #         "incomplete results for some detectors on %r experiment.\n"
+            #         % (d, experiment.name)
+            #     )
+            #     continue
 
             new_scores[d] = {}
             for m in scores[d]:

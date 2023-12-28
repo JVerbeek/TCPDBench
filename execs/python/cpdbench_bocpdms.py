@@ -15,7 +15,9 @@ import argparse
 import numpy as np
 import time
 
-from bocpdms import CpModel, BVARNIG, Detector
+from bocpdms.cp_probability_model import CpModel
+from bocpdms.BVAR_NIG import BVARNIG
+from bocpdms.detector import Detector
 from multiprocessing import Process, Manager
 
 from cpdbench_utils import (

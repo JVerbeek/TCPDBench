@@ -63,81 +63,31 @@ BUILD_CMD = "make all"  # Build command
 ##############################################################################
 #                      Experiment parameters and settings                    #
 ##############################################################################
-DATADIR = "datasets"
+DATADIR = "datasets/cpgp-bench"
 EXECDIR = "execs"
 
 DATASETS = [
-    "apple",
-    "bank",
-    "bee_waggle_6",
-    "bitcoin",
-    "brent_spot",
-    "businv",
-    "centralia",
-    "children_per_woman",
-    "co2_canada",
     "construction",
-    "debt_ireland",
-    "gdp_argentina",
-    "gdp_croatia",
-    "gdp_iran",
-    "gdp_japan",
-    "global_co2",
-    "homeruns",
-    "iceland_tourism",
-    "jfk_passengers",
-    "lga_passengers",
-    "measles",
-    "nile",
-    "occupancy",
-    "ozone",
-    "quality_control_1",
+    "heart_rate",
     "quality_control_2",
     "quality_control_3",
     "quality_control_4",
-    "quality_control_5",
-    "rail_lines",
-    "ratner_stock",
-    "robocalls",
-    "run_log",
-    "scanline_126007",
-    "scanline_42049",
-    "seatbelts",
     "shanghai_license",
-    "uk_coal_employ",
     "unemployment_nl",
-    "usd_isk",
-    "us_population",
-    "well_log",
+    "quality_control_5"
 ]
 DATASET_NAMES = {k: k for k in DATASETS}
 
 METHODS = [
-    "oracle_bocpd",
-    "oracle_bocpdms",
-    "oracle_rbocpdms",
-    "oracle_cpnp",
-    "oracle_pelt",
-    "oracle_amoc",
-    "oracle_segneigh",
-    "oracle_binseg",
-    "oracle_rfpop",
-    "oracle_ecp",
-    "oracle_kcpa",
-    "oracle_wbs",
-    "oracle_prophet",
-    "oracle_zero",
+    "default_adaga_linear",
+    "default_adaga_rbf",
+    "default_adaga_matern",
     "default_bocpd",
     "default_bocpdms",
     "default_rbocpdms",
-    "default_cpnp",
     "default_pelt",
     "default_amoc",
-    "default_segneigh",
     "default_binseg",
-    "default_rfpop",
-    "default_ecp",
-    "default_kcpa",
     "default_wbs",
     "default_prophet",
     "default_zero",
@@ -302,6 +252,9 @@ PARAMS = {
     ],
     "oracle_prophet": [{"Nmax": "max"}, {"Nmax": "default"}],
     "oracle_zero": [{"no_param": 0}],
+    "default_adaga_rbf":[{"no_param": 0}],
+    "default_adaga_linear":[{"no_param": 0}],
+    "default_adaga_matern":[{"no_param": 0}],
     "default_bocpd": [{"no_param": 0}],
     "default_bocpdms": [{"no_param": 0}],
     "default_rbocpdms": [{"no_param": 0}],
@@ -396,6 +349,27 @@ COMMANDS = {
         "python {execdir}/python/cpdbench_zero.py "
         "-i {datadir}/{dataset}.json"
     ),
+    "default_adaga_rbf": (
+        ". /home/janneke/miniconda3/etc/profile.d/conda.sh &&"
+        "conda activate adaga && "
+        "python {execdir}/python/cpdbench_adaga.py "
+        "-i {datadir}/{dataset}.json --delta 0.6 --min_window_size 15 " 
+        "--batch_size 1 --kernel RBF && conda deactivate"
+    ),
+    "default_adaga_linear": (
+        ". /home/janneke/miniconda3/etc/profile.d/conda.sh &&"
+        "conda activate adaga && "
+        "python {execdir}/python/cpdbench_adaga.py "
+        "-i {datadir}/{dataset}.json --delta 0.6 --min_window_size 15 " 
+        "--batch_size 1 --kernel Linear && conda deactivate"
+    ),
+    "default_adaga_matern": (
+        ". /home/janneke/miniconda3/etc/profile.d/conda.sh &&"
+        "conda activate adaga && "
+        "python {execdir}/python/cpdbench_adaga.py "
+        "-i {datadir}/{dataset}.json --delta 0.6 --min_window_size 15 " 
+        "--batch_size 1 --kernel Matern52 && conda deactivate"
+    ),
     "default_amoc": (
         "Rscript --no-save --slave "
         "{execdir}/R/cpdbench_changepoint.R -i {datadir}/{dataset}.json "
@@ -450,13 +424,13 @@ COMMANDS = {
         "--prior-a 1.0 --prior-b 1.0 --prior-k 1.0"
     ),
     "default_bocpdms": (
-        "source {execdir}/python/bocpdms/venv/bin/activate && "
+        ". {execdir}/python/bocpdms/venv/bin/activate && "
         "python {execdir}/python/cpdbench_bocpdms.py "
         "-i {datadir}/{dataset}.json --intensity 100 --prior-a 1.0 "
         "--prior-b 1.0 --threshold 0"
     ),
     "default_rbocpdms": (
-        "source {execdir}/python/rbocpdms/venv/bin/activate && "
+        ". {execdir}/python/rbocpdms/venv/bin/activate && "
         "python {execdir}/python/cpdbench_rbocpdms.py "
         "-i {datadir}/{dataset}.json --intensity 100 --prior-a 1.0 "
         "--prior-b 1.0 --threshold 100 --alpha-param 0.5 --alpha-rld 0.5 "

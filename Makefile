@@ -74,7 +74,6 @@ clean_summaries:
 
 .PHONY: tables \
 	default_tables \
-	oracle_tables \
 	aggregate_wide \
 	descriptive \
 	annotator_agreement
@@ -83,7 +82,6 @@ table-dir:
 	mkdir -p $(TABLE_DIR)
 
 tables: default_tables \
-	oracle_tables \
 	aggregate_wide \
 	descriptive \
 	annotator_agreement
@@ -249,7 +247,7 @@ clean_score_files:
 #                              #
 # Critical Difference Diagrams #
 #                              #
-################################
+###############################e
 
 .PHONY: cd_diagrams clean_cd_diagrams
 
@@ -370,17 +368,22 @@ clean_constants:
 #             #
 ###############
 
-.PHONY: venvs R_venv py_venvs venv_bocpdms venv_rbocpdms clean_venvs \
+.PHONY: venvs R_venv py_venvs venv_bocpdms venv_rbocpdms venv_adaga clean_venvs \
 	clean_py_venv clean_R_venv
 
-venvs: venv_bocpdms venv_rbocpdms R_venv
+venvs: venv_bocpdms venv_rbocpdms R_venv venv_adaga
 
-py_venvs: venv_bocpdms venv_rbocpdms
+py_venvs: venv_bocpdms venv_rbocpdms venv_adaga
 
 venv_bocpdms: ./execs/python/bocpdms/venv
 
+./execs/python/adaga/venv:
+	cd execs/python/adaga &&
+		conda activate adaga && pip install wheel && \
+		pip install -r requirements.txt
+
 ./execs/python/bocpdms/venv:
-	cd execs/python/bocpdms && python -m venv venv && \
+	cd execs/python/bocpdms && \
 		source venv/bin/activate && pip install wheel && \
 		pip install -r requirements.txt
 
@@ -397,6 +400,7 @@ R_venv:
 clean_py_venv:
 	rm -rf ./execs/python/bocpdms/venv
 	rm -rf ./execs/python/rbocpdms/venv
+	rm -rf ./execs/python/adaga/venv
 
 clean_R_venv:
 	rm -rf ./execs/R/rlibs

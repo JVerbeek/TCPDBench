@@ -1,0 +1,5 @@
+can_find_python_cmd     Determines whether or not it can find a
+                        suitable python cmd
+find_python_cmd         Find a suitable python cmd or give error if not
+                        possible
+is_python_sufficient    Tests whether the python command is sufficient
