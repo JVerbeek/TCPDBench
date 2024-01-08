@@ -73,8 +73,12 @@ DATASETS = [
     "quality_control_3",
     "quality_control_4",
     "shanghai_license",
+    "measles",
     "unemployment_nl",
     "quality_control_5"
+    "covid_wastewater"
+    "scanline_42049"
+    "scanline_126007"
 ]
 DATASET_NAMES = {k: k for k in DATASETS}
 
@@ -85,13 +89,18 @@ METHODS = [
     "default_bocpd",
     "default_bocpdms",
     "default_rbocpdms",
+    "default_cpnp",
     "default_pelt",
     "default_amoc",
+    "default_segneigh",
     "default_binseg",
+    "default_rfpop",
+    "default_ecp",
+    "default_kcpa",
     "default_wbs",
     "default_prophet",
     "default_zero",
-]
+    ]
 
 R_changepoint_params = {
     "function": ["mean", "var", "meanvar"],
