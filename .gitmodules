@@ -4,3 +4,6 @@
 [submodule "execs/python/rbocpdms"]
 	path = execs/python/rbocpdms
 	url = https://github.com/GjjvdBurg/rbocpdms.git
+[submodule "execs/python/adaga"]
+	path = execs/python/adaga
+	url = https://github.com/JVerbeek/adaga.git
