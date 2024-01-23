@@ -75,9 +75,9 @@ DATASETS = [
     "shanghai_license",
     "measles",
     "unemployment_nl",
-    "quality_control_5"
-    "covid_wastewater"
-    "scanline_42049"
+    "quality_control_5", 
+    "covid_wastewater",
+    "scanline_42049",
     "scanline_126007"
 ]
 DATASET_NAMES = {k: k for k in DATASETS}

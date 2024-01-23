@@ -37,6 +37,7 @@ class Dataset(enum.Enum):
     # children_per_woman = "children_per_woman"
     # co2_canada = "co2_canada"
     construction = "construction"
+    covid_wastewater = "covid_wastewater"
     # debt_ireland = "debt_ireland"
     # gdp_argentina = "gdp_argentina"
     # gdp_croatia = "gdp_croatia"
@@ -60,12 +61,12 @@ class Dataset(enum.Enum):
     # ratner_stock = "ratner_stock"
     # robocalls = "robocalls"
     # run_log = "run_log"
-    # scanline_126007 = "scanline_126007"
-    # scanline_42049 = "scanline_42049"
+    scanline_126007 = "scanline_126007"
+    scanline_42049 = "scanline_42049"
     # seatbelts = "seatbelts"
     shanghai_license = "shanghai_license"
     # uk_coal_employ = "uk_coal_employ"
-    # measles = "measles"
+    measles = "measles"
     unemployment_nl = "unemployment_nl"
     # us_population = "us_population"
     # usd_isk = "usd_isk"
@@ -83,19 +84,21 @@ class Experiment(enum.Enum):
 
 
 class Method(enum.Enum):
-    adaga= "adaga"
+    adaga_linear = "adaga_linear"
+    adaga_matern = "adaga_matern"
+    adaga_rbf = "adaga_rbf"
     amoc = "amoc"
     binseg = "binseg"
     bocpd = "bocpd"
     bocpdms = "bocpdms"
-    # cpnp = "cpnp"
-    # ecp = "ecp"
-    # kcpa = "kcpa"
+    cpnp = "cpnp"
+    ecp = "ecp"
+    kcpa = "kcpa"
     pelt = "pelt"
-    # prophet = "prophet"
+    prophet = "prophet"
     rbocpdms = "rbocpdms"
-    # rfpop = "rfpop"
-    # segneigh = "segneigh"
+    rfpop = "rfpop"
+    segneigh = "segneigh"
     wbs = "wbs"
     zero = "zero"
 
@@ -127,8 +130,8 @@ class Result:
 MULTIMETHODS = (
     Method.bocpd,
     Method.bocpdms,
-    # Method.ecp,
-    # Method.kcpa,
+    Method.ecp,
+    Method.kcpa,
     Method.rbocpdms,
     Method.zero,
 )
@@ -152,9 +155,9 @@ QC_DATASETS = (
 # Methods that handle missing values
 MISSING_METHODS = (
     Method.bocpdms,
-    # Method.ecp,
-    # Method.kcpa,
-    # Method.prophet,
+    Method.ecp,
+    Method.kcpa,
+    Method.prophet,
     Method.zero,
 )
 

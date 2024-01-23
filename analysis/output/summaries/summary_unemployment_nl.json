@@ -34,14 +34,54 @@
 		]
 	},
 	"results": {
-		"default_adaga": [
+		"default_adaga_linear": [
 			{
 				"parameters": {},
-				"task_file": "fc13a29ffaecada6.json",
+				"task_file": "e751c6fd184f2b6b.json",
+				"cplocations": [
+					64,
+					80,
+					140,
+					156
+				],
+				"scores": {
+					"f1": 0.5513513513513514,
+					"precision": 0.6,
+					"recall": 0.51,
+					"cover": 0.4382413795732131
+				},
+				"status": "SUCCESS"
+			}
+		],
+		"default_adaga_matern": [
+			{
+				"parameters": {},
+				"task_file": "5198445ae24db966.json",
+				"cplocations": [
+					47,
+					71,
+					139,
+					155,
+					176,
+					192
+				],
+				"scores": {
+					"f1": 0.49471458773784344,
+					"precision": 0.42857142857142855,
+					"recall": 0.585,
+					"cover": 0.47325942217187456
+				},
+				"status": "SUCCESS"
+			}
+		],
+		"default_adaga_rbf": [
+			{
+				"parameters": {},
+				"task_file": "c2c6a160b0abc777.json",
 				"cplocations": [
 					46,
 					67,
-					96,
+					92,
 					139,
 					157,
 					173,
@@ -51,7 +91,7 @@
 					"f1": 0.4409340659340659,
 					"precision": 0.375,
 					"recall": 0.535,
-					"cover": 0.41952666752469525
+					"cover": 0.41495355168657894
 				},
 				"status": "SUCCESS"
 			}
@@ -167,6 +207,289 @@
 				"status": "SUCCESS"
 			}
 		],
+		"default_cpnp": [
+			{
+				"parameters": {
+					"method": "PELT",
+					"test.stat": "empirical_distribution",
+					"minseglen": 1,
+					"nquantiles": 10,
+					"penalty": "MBIC"
+				},
+				"task_file": "7cc7836f2aa9d44d.json",
+				"cplocations": [
+					17,
+					65,
+					120,
+					130,
+					142,
+					174
+				],
+				"scores": {
+					"f1": 0.683359415753782,
+					"precision": 0.7142857142857143,
+					"recall": 0.655,
+					"cover": 0.5030916551496796
+				},
+				"status": "SUCCESS"
+			}
+		],
+		"default_ecp": [
+			{
+				"parameters": {
+					"k": "null",
+					"algorithm": "e.divisive",
+					"alpha": 1,
+					"cost": 1,
+					"maxcp": null,
+					"minsize": 30,
+					"runs": 199,
+					"siglvl": 0.05
+				},
+				"task_file": "99a53c00c6bf5dca.json",
+				"cplocations": [
+					30,
+					67,
+					113,
+					143,
+					175
+				],
+				"scores": {
+					"f1": 0.6203208556149732,
+					"precision": 0.6666666666666666,
+					"recall": 0.58,
+					"cover": 0.4684513676225877
+				},
+				"status": "SUCCESS"
+			}
+		],
+		"default_kcpa": [
+			{
+				"parameters": {
+					"L": 214,
+					"algorithm": "kcpa",
+					"alpha": null,
+					"cost": 1,
+					"maxcp": "max",
+					"minsize": 30,
+					"runs": 199,
+					"siglvl": null
+				},
+				"task_file": "a5c2a94c386bcb33.json",
+				"cplocations": [
+					2,
+					4,
+					5,
+					6,
+					7,
+					10,
+					11,
+					12,
+					13,
+					15,
+					16,
+					17,
+					18,
+					19,
+					20,
+					21,
+					22,
+					23,
+					24,
+					25,
+					26,
+					27,
+					28,
+					29,
+					30,
+					31,
+					32,
+					33,
+					34,
+					35,
+					36,
+					37,
+					38,
+					39,
+					40,
+					41,
+					42,
+					43,
+					44,
+					45,
+					46,
+					47,
+					48,
+					49,
+					50,
+					51,
+					52,
+					53,
+					54,
+					55,
+					56,
+					57,
+					58,
+					60,
+					61,
+					62,
+					63,
+					64,
+					65,
+					66,
+					67,
+					68,
+					69,
+					70,
+					71,
+					72,
+					73,
+					74,
+					75,
+					76,
+					77,
+					78,
+					79,
+					80,
+					81,
+					82,
+					83,
+					84,
+					85,
+					86,
+					87,
+					88,
+					89,
+					90,
+					91,
+					92,
+					93,
+					94,
+					95,
+					96,
+					97,
+					99,
+					100,
+					101,
+					103,
+					104,
+					105,
+					106,
+					107,
+					108,
+					109,
+					110,
+					111,
+					112,
+					114,
+					115,
+					116,
+					117,
+					118,
+					119,
+					120,
+					121,
+					122,
+					123,
+					124,
+					125,
+					126,
+					127,
+					128,
+					129,
+					130,
+					131,
+					132,
+					133,
+					134,
+					135,
+					136,
+					137,
+					138,
+					139,
+					140,
+					141,
+					142,
+					143,
+					144,
+					145,
+					146,
+					147,
+					148,
+					149,
+					150,
+					151,
+					152,
+					153,
+					154,
+					155,
+					156,
+					157,
+					158,
+					159,
+					160,
+					161,
+					162,
+					163,
+					164,
+					165,
+					166,
+					167,
+					168,
+					169,
+					170,
+					171,
+					172,
+					173,
+					174,
+					175,
+					176,
+					177,
+					178,
+					179,
+					180,
+					181,
+					182,
+					183,
+					184,
+					185,
+					186,
+					187,
+					188,
+					189,
+					190,
+					191,
+					192,
+					193,
+					194,
+					195,
+					196,
+					197,
+					198,
+					199,
+					200,
+					201,
+					202,
+					203,
+					204,
+					205,
+					206,
+					207,
+					208,
+					209,
+					210,
+					211,
+					212
+				],
+				"scores": {
+					"f1": 0.14545454545454545,
+					"precision": 0.0784313725490196,
+					"recall": 1.0,
+					"cover": 0.03925233644859812
+				},
+				"status": "SUCCESS"
+			}
+		],
 		"default_pelt": [
 			{
 				"parameters": {
@@ -187,6 +510,27 @@
 					"precision": 1.0,
 					"recall": 0.63,
 					"cover": 0.6483671445199073
+				},
+				"status": "SUCCESS"
+			}
+		],
+		"default_prophet": [
+			{
+				"parameters": {
+					"changepoint.range": 1,
+					"threshold": 0.01,
+					"yearly.seasonality": "auto",
+					"weekly.seasonality": "auto",
+					"daily.seasonality": "auto",
+					"Nmax": 25
+				},
+				"task_file": "5b2a12715c22d17c.json",
+				"cplocations": [],
+				"scores": {
+					"f1": 0.5663082437275986,
+					"precision": 1.0,
+					"recall": 0.395,
+					"cover": 0.5065595248493318
 				},
 				"status": "SUCCESS"
 			}
@@ -228,6 +572,75 @@
 					"precision": 0.5,
 					"recall": 0.49000000000000005,
 					"cover": 0.5385050140609804
+				},
+				"status": "SUCCESS"
+			}
+		],
+		"default_rfpop": [
+			{
+				"parameters": {
+					"lambda": 10.73195,
+					"lthreshold": 3,
+					"loss": "Outlier"
+				},
+				"task_file": "054051248d9cfc50.json",
+				"cplocations": [
+					10,
+					17,
+					23,
+					42,
+					47,
+					53,
+					66,
+					70,
+					85,
+					100,
+					120,
+					125,
+					130,
+					136,
+					140,
+					154,
+					166,
+					171,
+					174,
+					180,
+					185,
+					189,
+					192,
+					196,
+					202
+				],
+				"scores": {
+					"f1": 0.5491990846681922,
+					"precision": 0.38461538461538464,
+					"recall": 0.96,
+					"cover": 0.24328043451875225
+				},
+				"status": "SUCCESS"
+			}
+		],
+		"default_segneigh": [
+			{
+				"parameters": {
+					"Q": 5,
+					"func": "mean",
+					"max_cp": "default",
+					"method": "SegNeigh",
+					"penalty": "BIC",
+					"test_statistic": "Normal"
+				},
+				"task_file": "298055f74dd993bd.json",
+				"cplocations": [
+					131,
+					140,
+					174
+				],
+				"scores": {
+					"f1": 0.7730061349693252,
+					"precision": 1.0,
+					"recall": 0.63,
+					"cover": 0.6483671445199073
 				},
 				"status": "SUCCESS"
 			}

@@ -30,4 +30,4 @@ Author: R Core team [aut] (The code in urltools.R adapted from the tools
 Maintainer: Gábor Csárdi <csardi.gabor@gmail.com>
 Repository: CRAN
 Date/Publication: 2021-11-30 13:40:02 UTC
-Built: R 4.3.1; ; 2023-12-18 10:03:11 UTC; unix
+Built: R 4.1.2; ; 2024-01-12 10:09:33 UTC; unix

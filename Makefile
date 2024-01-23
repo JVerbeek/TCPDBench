@@ -383,7 +383,7 @@ venv_bocpdms: ./execs/python/bocpdms/venv
 		pip install -r requirements.txt
 
 ./execs/python/bocpdms/venv:
-	cd execs/python/bocpdms && \
+	cd execs/python/bocpdms && python -m venv venv && \
 		source venv/bin/activate && pip install wheel && \
 		pip install -r requirements.txt
 
@@ -397,17 +397,17 @@ venv_rbocpdms: ./execs/python/rbocpdms/venv
 R_venv:
 	bash ./utils/R_setup.sh Rpackages.txt ./execs/R/rlibs
 
-clean_py_venv:
-	rm -rf ./execs/python/bocpdms/venv
-	rm -rf ./execs/python/rbocpdms/venv
-	rm -rf ./execs/python/adaga/venv
+# clean_py_venv:
+# 	rm -rf ./execs/python/bocpdms/venv
+# 	rm -rf ./execs/python/rbocpdms/venv
+# 	rm -rf ./execs/python/adaga/venv
 
-clean_R_venv:
-	rm -rf ./execs/R/rlibs
-	rm -f ./.Rprofile ./.Renviron
-	rm -f ./.Renviron
+# clean_R_venv:
+# 	rm -rf ./execs/R/rlibs
+# 	rm -f ./.Rprofile ./.Renviron
+# 	rm -f ./.Renviron
 
-clean_venvs: clean_R_venv clean_py_venv
+# clean_venvs: clean_R_venv clean_py_venv
 
 ##############
 #            #
@@ -426,6 +426,6 @@ validate: ./utils/validate_schema.py ./schema.json
 #         #
 ###########
 
-clean: clean_results clean_venvs
+clean: clean_results
 
 clean_results: clean_summaries clean_tables clean_constants
