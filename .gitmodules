@@ -7,3 +7,6 @@
 [submodule "execs/python/rbocpdms"]
 	path = execs/python/rbocpdms
 	url = https://github.com/GjjvdBurg/rbocpdms.git
+[submodule "datasets/TCPD"]
+	path = datasets/TCPD
+	url = https://github.com/alan-turing-institute/TCPD.git
