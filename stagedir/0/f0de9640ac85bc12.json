@@ -1,0 +1,67 @@
+Initializing BVAR object
+Initializing BVAR object
+Initializing BVAR object
+Initializing BVAR object
+Processing observation #50
+Last iteration took 0.01768946647644043 seconds
+Processing observation #100
+Last iteration took 0.027593135833740234 seconds
+Processing observation #150
+Last iteration took 0.04798269271850586 seconds
+Processing observation #200
+Last iteration took 0.048221588134765625 seconds
+Processing observation #250
+Last iteration took 0.05660700798034668 seconds
+Processing observation #300
+Last iteration took 0.07800078392028809 seconds
+Processing observation #350
+Last iteration took 0.08933639526367188 seconds
+Processing observation #400
+Last iteration took 0.066375732421875 seconds
+Processing observation #450
+Last iteration took 0.0743262767791748 seconds
+Processing observation #500
+Last iteration took 0.08247780799865723 seconds
+Processing observation #550
+Last iteration took 0.09025239944458008 seconds
+Processing observation #600
+Last iteration took 0.09901022911071777 seconds
+Processing observation #650
+Last iteration took 0.10591650009155273 seconds
+Processing observation #700
+Last iteration took 0.11546730995178223 seconds
+Processing observation #750
+Last iteration took 0.1213231086730957 seconds
+Processing observation #800
+Last iteration took 0.127885103225708 seconds
+{
+	"command": "/home/janneke/TCPDBench/execs/python/cpdbench_bocpdms.py -i /home/janneke/TCPDBench/datasets/us_population.json --intensity 100 --prior-a 1.0 --prior-b 1.0 --threshold 0",
+	"dataset": "us_population",
+	"dataset_md5": "77037fc5ff0338516a56ae686aa4dcba",
+	"error": null,
+	"hostname": "hex-portable",
+	"parameters": {
+		"S1": 1,
+		"S2": 1,
+		"intensity": 100.0,
+		"intercept_grouping": null,
+		"lower_AR": 1,
+		"prior_a": 1.0,
+		"prior_b": 1.0,
+		"prior_mean_scale": 0,
+		"prior_var_scale": 1,
+		"threshold": 0,
+		"upper_AR": 4,
+		"use_timeout": false
+	},
+	"result": {
+		"cplocations": [
+			2,
+			3
+		],
+		"runtime": 61.385703563690186
+	},
+	"script": "/home/janneke/TCPDBench/execs/python/cpdbench_bocpdms.py",
+	"script_md5": "12b7d810302374a3439215d0d8747a0a",
+	"status": "SUCCESS"
+}

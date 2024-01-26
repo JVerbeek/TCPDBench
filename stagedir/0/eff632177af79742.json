@@ -1,0 +1,60 @@
+Initializing BVAR object
+Initializing BVAR object
+Initializing BVAR object
+Initializing BVAR object
+Processing observation #50
+Last iteration took 0.018864870071411133 seconds
+Processing observation #100
+Last iteration took 0.030004024505615234 seconds
+Processing observation #150
+Last iteration took 0.050756216049194336 seconds
+Processing observation #200
+Last iteration took 0.03981137275695801 seconds
+Processing observation #250
+Last iteration took 0.04851984977722168 seconds
+Processing observation #300
+Last iteration took 0.056078433990478516 seconds
+Processing observation #350
+Last iteration took 0.06380271911621094 seconds
+Processing observation #400
+Last iteration took 0.07463550567626953 seconds
+Processing observation #450
+Last iteration took 0.08189225196838379 seconds
+Processing observation #500
+Last iteration took 0.09129452705383301 seconds
+Processing observation #550
+Last iteration took 0.09917521476745605 seconds
+Processing observation #600
+Last iteration took 0.1129615306854248 seconds
+{
+	"command": "/home/janneke/TCPDBench/execs/python/cpdbench_bocpdms.py -i /home/janneke/TCPDBench/datasets/bee_waggle_6.json --intensity 100 --prior-a 1.0 --prior-b 1.0 --threshold 0",
+	"dataset": "bee_waggle_6",
+	"dataset_md5": "4f03feafecb3be0b069b3cb0d6b17d4f",
+	"error": null,
+	"hostname": "hex-portable",
+	"parameters": {
+		"S1": 4,
+		"S2": 1,
+		"intensity": 100.0,
+		"intercept_grouping": null,
+		"lower_AR": 1,
+		"prior_a": 1.0,
+		"prior_b": 1.0,
+		"prior_mean_scale": 0,
+		"prior_var_scale": 1,
+		"threshold": 0,
+		"upper_AR": 4,
+		"use_timeout": false
+	},
+	"result": {
+		"cplocations": [
+			1,
+			2,
+			24
+		],
+		"runtime": 36.85062527656555
+	},
+	"script": "/home/janneke/TCPDBench/execs/python/cpdbench_bocpdms.py",
+	"script_md5": "12b7d810302374a3439215d0d8747a0a",
+	"status": "SUCCESS"
+}

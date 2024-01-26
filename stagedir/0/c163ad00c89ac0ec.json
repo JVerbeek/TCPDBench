@@ -1,0 +1,15 @@
+{
+	"command": "/home/janneke/TCPDBench/execs/python/cpdbench_zero.py -i /home/janneke/TCPDBench/datasets/businv.json",
+	"dataset": "businv",
+	"dataset_md5": "d2ab178da17b2e659a10a102a4b9f332",
+	"error": null,
+	"hostname": "hex-portable",
+	"parameters": {},
+	"result": {
+		"cplocations": [],
+		"runtime": 4.76837158203125e-07
+	},
+	"script": "/home/janneke/TCPDBench/execs/python/cpdbench_zero.py",
+	"script_md5": "95b65ddd5669b41385966a4aad387118",
+	"status": "SUCCESS"
+}

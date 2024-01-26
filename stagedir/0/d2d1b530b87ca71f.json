@@ -1,11 +1,11 @@
 {
 	"error" : null,
-	"command" : "/usr/lib/R/bin/exec/R --no-echo --no-restore --no-save --slave --file=/home/janneke/TCPDBench/execs/R/cpdbench_prophet.R --args -i /home/janneke/TCPDBench/datasets/quality_control_3.json -N default",
+	"command" : "/usr/lib64/R/bin/exec/R --no-echo --no-restore --no-save --slave --file=/home/janneke/TCPDBench/execs/R/cpdbench_prophet.R --args -i /home/janneke/TCPDBench/datasets/quality_control_5.json -N default",
 	"script" : "/home/janneke/TCPDBench/execs/R/cpdbench_prophet.R",
 	"script_md5" : "651dab1a04514f68e3d9719059dbc93f",
-	"hostname" : "hex",
-	"dataset" : "quality_control_3",
-	"dataset_md5" : "94f55ddedd03197bc3e660f6e1d840ee",
+	"hostname" : "hex-portable",
+	"dataset" : "quality_control_5",
+	"dataset_md5" : "2ebb10acafae18ebabf0217218717970",
 	"status" : "SUCCESS",
 	"parameters" : {
 		"changepoint.range" : 1,
@@ -17,6 +17,6 @@
 	},
 	"result" : {
 		"cplocations" : [],
-		"runtime" : 0.2134664
+		"runtime" : 0.1942923
 	}
 } 

@@ -1,0 +1,62 @@
+Initializing BVAR DPD object
+Processing observation #50
+Last iteration took 0.8523333072662354 seconds
+Processing observation #100
+Last iteration took 2.5408787727355957 seconds
+Processing observation #150
+Last iteration took 4.391973495483398 seconds
+Processing observation #200
+Last iteration took 3.563150644302368 seconds
+Processing observation #250
+Last iteration took 4.320927858352661 seconds
+Processing observation #300
+Last iteration took 3.507622718811035 seconds
+Processing observation #350
+Last iteration took 3.6401662826538086 seconds
+Processing observation #400
+Last iteration took 2.017491102218628 seconds
+Processing observation #450
+Last iteration took 0.8829545974731445 seconds
+{
+	"command": "/home/janneke/TCPDBench/execs/python/cpdbench_rbocpdms.py -i /home/janneke/TCPDBench/datasets/scanline_126007.json --intensity 100 --prior-a 1.0 --prior-b 1.0 --threshold 100 --alpha-param 0.5 --alpha-rld 0.5 --timeout 240",
+	"dataset": "scanline_126007",
+	"dataset_md5": "057d5741b623308af00c42e2c8e525c3",
+	"error": null,
+	"hostname": "hex-portable",
+	"parameters": {
+		"S1": 1,
+		"S2": 1,
+		"SGD_batch_size": 10,
+		"VB_window_size": 360,
+		"alpha_param": 0.5,
+		"alpha_rld": 0.5,
+		"anchor_batch_size_SCSG": 25,
+		"first_full_opt": 10,
+		"full_opt_thinning": 20,
+		"intensity": 100.0,
+		"intercept_grouping": null,
+		"loss_der_rld_learning": "absolute_loss",
+		"prior_a": 1.0,
+		"prior_b": 1.0,
+		"prior_mean_beta": null,
+		"prior_mean_scale": 0,
+		"prior_var_beta": null,
+		"prior_var_scale": 1.0,
+		"rld_DPD": "power_divergence",
+		"threshold": 100,
+		"timeout": 240,
+		"use_timeout": false
+	},
+	"result": {
+		"cplocations": [
+			1,
+			2,
+			11,
+			395
+		],
+		"runtime": 1448.5669214725494
+	},
+	"script": "/home/janneke/TCPDBench/execs/python/cpdbench_rbocpdms.py",
+	"script_md5": "befbcbc398da7ca05b448ec6fca9720a",
+	"status": "SUCCESS"
+}

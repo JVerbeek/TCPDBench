@@ -1,0 +1,69 @@
+Initializing BVAR DPD object
+Processing observation #50
+Last iteration took 1.0977232456207275 seconds
+Processing observation #100
+Last iteration took 3.4520933628082275 seconds
+Processing observation #150
+Last iteration took 4.208305597305298 seconds
+Processing observation #200
+Last iteration took 1.8989827632904053 seconds
+Processing observation #250
+Last iteration took 2.389812707901001 seconds
+Processing observation #300
+Last iteration took 1.4180502891540527 seconds
+Processing observation #350
+Last iteration took 2.264557361602783 seconds
+Processing observation #400
+Last iteration took 0.9660313129425049 seconds
+Processing observation #450
+Last iteration took 1.2072725296020508 seconds
+Processing observation #500
+Last iteration took 2.0769236087799072 seconds
+Processing observation #550
+Last iteration took 1.3659074306488037 seconds
+Processing observation #600
+Last iteration took 1.5727896690368652 seconds
+We have a nan increment at position (array([], dtype=int64),)
+We have a nan increment at position (array([], dtype=int64),)
+We have a nan increment at position (array([], dtype=int64),)
+We have a nan increment at position (array([], dtype=int64),)
+We have a nan increment at position (array([], dtype=int64),)
+We have a nan increment at position (array([], dtype=int64),)
+{
+	"command": "/home/janneke/TCPDBench/execs/python/cpdbench_rbocpdms.py -i /home/janneke/TCPDBench/datasets/bitcoin.json --intensity 100 --prior-a 1.0 --prior-b 1.0 --threshold 100 --alpha-param 0.5 --alpha-rld 0.5 --timeout 240",
+	"dataset": "bitcoin",
+	"dataset_md5": "f90ff14ed1fc0c3d47d4394d25cbce93",
+	"error": null,
+	"hostname": "hex-portable",
+	"parameters": {
+		"S1": 1,
+		"S2": 1,
+		"SGD_batch_size": 10,
+		"VB_window_size": 360,
+		"alpha_param": 0.5,
+		"alpha_rld": 0.5,
+		"anchor_batch_size_SCSG": 25,
+		"first_full_opt": 10,
+		"full_opt_thinning": 20,
+		"intensity": 100.0,
+		"intercept_grouping": null,
+		"loss_der_rld_learning": "absolute_loss",
+		"prior_a": 1.0,
+		"prior_b": 1.0,
+		"prior_mean_beta": null,
+		"prior_mean_scale": 0,
+		"prior_var_beta": null,
+		"prior_var_scale": 1.0,
+		"rld_DPD": "power_divergence",
+		"threshold": 100,
+		"timeout": 240,
+		"use_timeout": false
+	},
+	"result": {
+		"cplocations": null,
+		"runtime": null
+	},
+	"script": "/home/janneke/TCPDBench/execs/python/cpdbench_rbocpdms.py",
+	"script_md5": "befbcbc398da7ca05b448ec6fca9720a",
+	"status": "FAIL"
+}
