@@ -1,0 +1,21 @@
+{
+	"error" : null,
+	"command" : "/usr/lib64/R/bin/exec/R --no-echo --no-restore --no-save --slave --file=/home/janneke/TCPDBench/execs/R/cpdbench_rfpop.R --args -i /home/janneke/TCPDBench/datasets/quality_control_5.json -l Outlier",
+	"script" : "/home/janneke/TCPDBench/execs/R/cpdbench_rfpop.R",
+	"script_md5" : "95781ef9734c750d2029ef6139ca21cb",
+	"hostname" : "hex-portable",
+	"dataset" : "quality_control_5",
+	"dataset_md5" : "2ebb10acafae18ebabf0217218717970",
+	"status" : "SUCCESS",
+	"parameters" : {
+		"lambda" : 11.56765,
+		"lthreshold" : 3,
+		"loss" : "Outlier"
+	},
+	"result" : {
+		"cplocations" : [
+			324
+		],
+		"runtime" : 0.00370574
+	}
+} 

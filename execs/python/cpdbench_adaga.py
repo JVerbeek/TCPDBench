@@ -88,7 +88,7 @@ def main():
     # insert some code that runs adaga here
     parameters = make_param_dict(args, defaults)
     regions = run_adaga(mat, parameters)
-    locations = [[int(j) for j in list(i.values())] for i in regions.closed_windows]
+    locations = [e["window_end"] for e in regions.closed_windows]
     stop_time = time.time()
     runtime = stop_time - start_time
 

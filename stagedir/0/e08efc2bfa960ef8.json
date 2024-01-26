@@ -1,0 +1,28 @@
+{
+	"error" : null,
+	"command" : "/usr/lib64/R/bin/exec/R --no-echo --no-restore --no-save --slave --file=/home/janneke/TCPDBench/execs/R/cpdbench_changepoint.R --args -i /home/janneke/TCPDBench/datasets/lga_passengers.json -p BIC -f mean -t Normal -m SegNeigh -Q default",
+	"script" : "/home/janneke/TCPDBench/execs/R/cpdbench_changepoint.R",
+	"script_md5" : "6175ed267f515e2958637075675272db",
+	"hostname" : "hex-portable",
+	"dataset" : "lga_passengers",
+	"dataset_md5" : "3e7bf55fac17f59b400f8a558d3f0337",
+	"status" : "SUCCESS",
+	"parameters" : {
+		"Q" : 5,
+		"func" : "mean",
+		"max_cp" : "default",
+		"method" : "SegNeigh",
+		"penalty" : "BIC",
+		"test_statistic" : "Normal"
+	},
+	"result" : {
+		"cplocations" : [
+			109,
+			163,
+			253,
+			422,
+			467
+		],
+		"runtime" : 0.04282093
+	}
+} 

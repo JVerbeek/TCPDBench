@@ -1,0 +1,93 @@
+Initializing BVAR DPD object
+Processing observation #50
+Last iteration took 0.4869530200958252 seconds
+Processing observation #100
+Last iteration took 1.5966601371765137 seconds
+Processing observation #150
+Last iteration took 1.339613914489746 seconds
+Processing observation #200
+Last iteration took 0.6232485771179199 seconds
+Processing observation #250
+Last iteration took 0.4807255268096924 seconds
+Processing observation #300
+Last iteration took 0.8005733489990234 seconds
+Processing observation #350
+Last iteration took 0.472731351852417 seconds
+Processing observation #400
+Last iteration took 0.8347141742706299 seconds
+Processing observation #450
+Last iteration took 0.5441555976867676 seconds
+Processing observation #500
+Last iteration took 0.4243636131286621 seconds
+Processing observation #550
+Last iteration took 0.43593716621398926 seconds
+Processing observation #600
+Last iteration took 0.46361351013183594 seconds
+Processing observation #650
+Last iteration took 0.6694343090057373 seconds
+Processing observation #700
+Last iteration took 0.5462775230407715 seconds
+Processing observation #750
+Last iteration took 0.614649772644043 seconds
+Processing observation #800
+Last iteration took 0.5399320125579834 seconds
+Processing observation #850
+Last iteration took 0.5285329818725586 seconds
+Processing observation #900
+Last iteration took 0.5535566806793213 seconds
+Processing observation #950
+Last iteration took 0.5374386310577393 seconds
+{
+	"command": "/home/janneke/TCPDBench/execs/python/cpdbench_rbocpdms.py -i /home/janneke/TCPDBench/datasets/measles.json --intensity 100 --prior-a 1.0 --prior-b 1.0 --threshold 100 --alpha-param 0.5 --alpha-rld 0.5 --timeout 240",
+	"dataset": "measles",
+	"dataset_md5": "e42afd03be893fc7deb98514c94fa4c7",
+	"error": null,
+	"hostname": "hex-portable",
+	"parameters": {
+		"S1": 1,
+		"S2": 1,
+		"SGD_batch_size": 10,
+		"VB_window_size": 360,
+		"alpha_param": 0.5,
+		"alpha_rld": 0.5,
+		"anchor_batch_size_SCSG": 25,
+		"first_full_opt": 10,
+		"full_opt_thinning": 20,
+		"intensity": 100.0,
+		"intercept_grouping": null,
+		"loss_der_rld_learning": "absolute_loss",
+		"prior_a": 1.0,
+		"prior_b": 1.0,
+		"prior_mean_beta": null,
+		"prior_mean_scale": 0,
+		"prior_var_beta": null,
+		"prior_var_scale": 1.0,
+		"rld_DPD": "power_divergence",
+		"threshold": 100,
+		"timeout": 240,
+		"use_timeout": false
+	},
+	"result": {
+		"cplocations": [
+			1,
+			2,
+			55,
+			366,
+			395,
+			471,
+			499,
+			568,
+			600,
+			679,
+			707,
+			779,
+			812,
+			877,
+			911
+		],
+		"runtime": 606.5510351657867
+	},
+	"script": "/home/janneke/TCPDBench/execs/python/cpdbench_rbocpdms.py",
+	"script_md5": "befbcbc398da7ca05b448ec6fca9720a",
+	"status": "SUCCESS"
+}

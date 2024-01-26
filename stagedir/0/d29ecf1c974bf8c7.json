@@ -1,0 +1,57 @@
+Initializing BVAR object
+Initializing BVAR object
+Initializing BVAR object
+Processing observation #50
+Last iteration took 0.021442890167236328 seconds
+Processing observation #100
+Last iteration took 0.04400825500488281 seconds
+Processing observation #150
+Last iteration took 0.060220956802368164 seconds
+Processing observation #200
+Last iteration took 0.07790064811706543 seconds
+Processing observation #250
+Last iteration took 0.09311103820800781 seconds
+Processing observation #300
+Last iteration took 0.11266350746154785 seconds
+Processing observation #350
+Last iteration took 0.11475419998168945 seconds
+Processing observation #400
+Last iteration took 0.14623618125915527 seconds
+Processing observation #450
+Last iteration took 0.15645766258239746 seconds
+{
+	"command": "/home/janneke/TCPDBench/execs/python/cpdbench_bocpdms.py -i /home/janneke/TCPDBench/datasets/scanline_126007.json --intensity 100 --prior-a 1.0 --prior-b 1.0 --threshold 0",
+	"dataset": "scanline_126007",
+	"dataset_md5": "057d5741b623308af00c42e2c8e525c3",
+	"error": null,
+	"hostname": "hex-portable",
+	"parameters": {
+		"S1": 1,
+		"S2": 1,
+		"intensity": 100.0,
+		"intercept_grouping": null,
+		"lower_AR": 1,
+		"prior_a": 1.0,
+		"prior_b": 1.0,
+		"prior_mean_scale": 0,
+		"prior_var_scale": 1,
+		"threshold": 0,
+		"upper_AR": 3,
+		"use_timeout": false
+	},
+	"result": {
+		"cplocations": [
+			1,
+			2,
+			178,
+			252,
+			328,
+			376,
+			404
+		],
+		"runtime": 43.53437829017639
+	},
+	"script": "/home/janneke/TCPDBench/execs/python/cpdbench_bocpdms.py",
+	"script_md5": "12b7d810302374a3439215d0d8747a0a",
+	"status": "SUCCESS"
+}

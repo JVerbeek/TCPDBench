@@ -1,0 +1,34 @@
+Initializing BVAR object
+Initializing BVAR object
+Processing observation #50
+Last iteration took 0.007204771041870117 seconds
+{
+	"command": "/home/janneke/TCPDBench/execs/python/cpdbench_bocpdms.py -i /home/janneke/TCPDBench/datasets/ozone.json --intensity 100 --prior-a 1.0 --prior-b 1.0 --threshold 0",
+	"dataset": "ozone",
+	"dataset_md5": "348b1f85c3ec3da3b8989afe04c33b80",
+	"error": null,
+	"hostname": "hex-portable",
+	"parameters": {
+		"S1": 1,
+		"S2": 1,
+		"intensity": 100.0,
+		"intercept_grouping": null,
+		"lower_AR": 1,
+		"prior_a": 1.0,
+		"prior_b": 1.0,
+		"prior_mean_scale": 0,
+		"prior_var_scale": 1,
+		"threshold": 0,
+		"upper_AR": 2,
+		"use_timeout": false
+	},
+	"result": {
+		"cplocations": [
+			2
+		],
+		"runtime": 0.22856855392456055
+	},
+	"script": "/home/janneke/TCPDBench/execs/python/cpdbench_bocpdms.py",
+	"script_md5": "12b7d810302374a3439215d0d8747a0a",
+	"status": "SUCCESS"
+}
