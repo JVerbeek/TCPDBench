@@ -12,34 +12,32 @@ for dataset in os.listdir("abed_results"):
         ill_formatted = False
         with open(fp) as f:   # open JSON as textfile
             lines = f.readlines()
-            print(fp)
+            if "adaga" in filename: 
+                json_dict = json.loads("".join(lines))
+                if type(json_dict["result"]["cplocations"][0]) == list:
+                    json_dict["result"]["cplocations"] = [seg[0] for seg in json_dict["result"]["cplocations"]]
+                    with open(fp, "w") as f: 
+                        json.dump(json_dict, f)
+                        continue
         for i, line in enumerate(lines):
             if "{" in line and found < 0:
                 found = i
                 break
             if line.startswith("PARTITIONING CREATED:"):
                 ill_formatted = True
-                b = ast.literal_eval(line.strip().split(": ")[1])
-                b = [t[1] for t in b]
-                break
 
-        if not ill_formatted and found < 0:
+        if False == ill_formatted or found < 0:
             continue
         else:
+            print(ill_formatted, found)
             lines = lines[i:]
-
-        json_content = str("".join([line.strip() for line in lines]))
-        json_content = json_content.replace("null", "\"None\"")
-        json_content = json_content.replace("false", "False")
-        json_content = json_content.replace("true", "True")
-        print(json_content, found)
-        json_dict = ast.literal_eval(json_content)
-
-        if "adaga" in file:
-            json_dict["result"]["cplocations"] = b
-    
-        with open(fp, "w") as f: 
-            json.dump(json_dict, f)
-
+            json_content = str("".join([line.strip() for line in lines]))
+            json_content = json_content.replace("null", "\"None\"")
+            json_content = json_content.replace("false", "False")
+            json_content = json_content.replace("true", "True")
+            json_dict = ast.literal_eval(json_content)
+            
+            with open(fp, "w") as f: 
+                json.dump(json_dict, f)
 
     

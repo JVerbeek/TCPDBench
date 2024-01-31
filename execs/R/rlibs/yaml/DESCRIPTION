@@ -18,4 +18,4 @@ NeedsCompilation: yes
 Packaged: 2023-12-11 16:46:09 UTC; garbetsp
 Repository: CRAN
 Date/Publication: 2023-12-11 18:50:02 UTC
-Built: R 4.3.1; x86_64-pc-linux-gnu; 2023-12-18 09:56:11 UTC; unix
+Built: R 4.1.2; x86_64-pc-linux-gnu; 2024-01-12 10:01:57 UTC; unix

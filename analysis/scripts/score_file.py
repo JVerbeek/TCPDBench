@@ -186,7 +186,8 @@ def write_json(results: List[Result]):
                 None,
             )
             # intended to fail if r is None, because that shouldn't happen
-            output[d.name][m.name] = r.score
+            if r:
+                output[d.name][m.name] = r.score
     print(json.dumps(output, indent="\t", sort_keys=True))
 
 

@@ -15,6 +15,7 @@ License: See the LICENSE file.
 
 import argparse
 import json
+import numpy as np
 import os
 
 from typing import List
@@ -84,12 +85,18 @@ def write_latex(results: List[Result]):
     for dataset in os.listdir("abed_results/"):
         row = [verb(dataset)]
         d = Dataset(dataset)
-
+        if dataset == "covid_wastewater":
+            continue
         for method in methods:
             m = Method(method)
             print(m, d)
-            r = next((r for r in results if r.method == m and r.dataset == d))
-            row.append(r.placeholder if r.score is None else r.score)
+            try:
+                r = next((r for r in results if r.method == m and r.dataset == d))
+                row.append(r.placeholder if r.score is None else r.score)
+            except StopIteration:
+                row.append(np.nan)
+                continue
+            
 
         table.append(row)
     spec = "l" + "c" * len(methods)
@@ -122,6 +129,7 @@ def main():
         metric=metric,
         experiment=experiment,
     )
+    print(results)
     write_latex(results)
 
 
