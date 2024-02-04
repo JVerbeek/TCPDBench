@@ -371,6 +371,7 @@ clean_constants:
 .PHONY: venvs R_venv py_venvs venv_bocpdms venv_rbocpdms venv_adaga clean_venvs \
 	clean_py_venv clean_R_venv
 
+cluster-venvs: venv_bocpdms venb rbocpdms R_venv venv_adaga cluster_sync
 venvs: venv_bocpdms venv_rbocpdms R_venv venv_adaga
 
 py_venvs: venv_bocpdms venv_rbocpdms venv_adaga
@@ -378,21 +379,21 @@ py_venvs: venv_bocpdms venv_rbocpdms venv_adaga
 venv_bocpdms: ./execs/python/bocpdms/venv
 
 ./execs/python/adaga/venv:
-	cd execs/python/adaga && conda create -n adaga && \
-		conda activate adaga && pip install wheel && \
-		pip install -r requirements.txt && conda deactivate
+	micromamba create -n adaga && \
+		micromamba activate adaga && pip install wheel && \
+		pip install -r requirements.txt && micromamba deactivate
 
 ./execs/python/bocpdms/venv:
-	cd ${HOME}/TCPDBench/execs/python/bocpdms && python -m venv venv && \
-		source venv/bin/activate && pip install wheel && \
-		pip install -r requirements.txt
+	micromamba create -n bocpdms && pip install wheel && \
+		pip install -r execs/python/bocpdms/requirements.txt
 
 venv_rbocpdms: ./execs/python/rbocpdms/venv
 
 ./execs/python/rbocpdms/venv:
-	cd ${HOME}/TCPDBench/execs/python/rbocpdms && python -m venv venv && \
-		source venv/bin/activate && pip install wheel && \
-		pip install -r ../bocpdms/requirements.txt
+	micromamba create -n rbocpdms && pip install wheel && \
+		pip install -r execs/python/bocpdms/requirements.txt
+
+cluster_sync: ./${HOME}/utility-scripts/sync-das.sh
 
 R_venv:
 	bash ./utils/R_setup.sh Rpackages.txt ./execs/R/rlibs

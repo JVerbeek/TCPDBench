@@ -1,0 +1,6 @@
+[submodule "bocpdms"]
+	path = bocpdms
+	url = https://github.com/JVerbeek/bocpdms.git
+[submodule "execs/python/bocpdms"]
+	path = execs/python/bocpdms
+	url = https://github.com/JVerbeek/bocpdms.git
