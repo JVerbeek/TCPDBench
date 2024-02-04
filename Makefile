@@ -383,11 +383,7 @@ venv_bocpdms: ./execs/python/bocpdms/venv
 		pip install -r requirements.txt && conda deactivate
 
 ./execs/python/bocpdms/venv:
-<<<<<<< HEAD
-	cd execs/python/bocpdms && python -m venv venv && \
-=======
 	cd ${HOME}/TCPDBench/execs/python/bocpdms && python -m venv venv && \
->>>>>>> 4e93fef71043771f27571b66ebf549981446c981
 		source venv/bin/activate && pip install wheel && \
 		pip install -r requirements.txt
 
