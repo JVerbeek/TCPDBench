@@ -1,6 +1,6 @@
 Package: QuickJSR
 Title: Interface for the 'QuickJS' Lightweight 'JavaScript' Engine
-Version: 1.0.9
+Version: 1.1.3
 Authors@R: c(
   person(given = c("Andrew", "R."), family = "Johnson", role = c("aut", "cre"),
           email = "andrew.johnson@arjohnsonau.com",
@@ -15,23 +15,23 @@ Description: An 'R' interface to the 'QuickJS' portable 'JavaScript' engine.
     dependencies beyond a 'C' compiler.
 License: MIT + file LICENSE
 Encoding: UTF-8
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 NeedsCompilation: yes
 SystemRequirements: GNU make
 Imports: jsonlite, R6, Rcpp
 LinkingTo: Rcpp
-URL: https://github.com/andrjohns/QuickJSR https://bellard.org/quickjs/
-        (upstream)
+URL: https://github.com/andrjohns/QuickJSR,
+        https://bellard.org/quickjs/
 BugReports: https://github.com/andrjohns/QuickJSR/issues
 Suggests: testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Config/testthat/parallel: true
 Language: en-GB
-Packaged: 2023-12-18 04:34:13 UTC; andrew
+Packaged: 2024-01-31 09:52:16 UTC; andrew
 Author: Andrew R. Johnson [aut, cre] (<https://orcid.org/0000-0001-7000-8065>),
   Fabrice Bellard [ctb, cph] (Author of QuickJS sources and headers),
   Charlie Gordon [ctb, cph] (Author of QuickJS sources and headers)
 Maintainer: Andrew R. Johnson <andrew.johnson@arjohnsonau.com>
 Repository: CRAN
-Date/Publication: 2023-12-18 05:40:02 UTC
-Built: R 4.1.2; x86_64-pc-linux-gnu; 2024-01-12 10:31:11 UTC; unix
+Date/Publication: 2024-01-31 12:50:02 UTC
+Built: R 4.1.2; x86_64-pc-linux-gnu; 2024-02-04 15:56:05 UTC; unix

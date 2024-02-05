@@ -13,6 +13,7 @@ License: See the LICENSE file.
 import copy
 import hashlib
 import json
+import os
 import numpy as np
 import socket
 import sys

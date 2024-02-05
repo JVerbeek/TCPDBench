@@ -1,0 +1,21 @@
+Package: robseg
+Type: Package
+Title: Segmentation using functionnal pruning for robust losses
+Version: 2019.07.02
+Author: Guillem Rigaill
+Maintainer: Guillem Rigaill <rigaill@evry.inra.fr>
+Description: A wrapper to a C implementation of robseg
+License: LGPL (>= 2.1)
+RemoteType: github
+RemoteHost: api.github.com
+RemoteRepo: robust-fpop
+RemoteUsername: guillemr
+RemoteRef: ce49c26
+RemoteSha: ce49c26aa5b5eee84a835e69cbb7ca572f669792
+GithubRepo: robust-fpop
+GithubUsername: guillemr
+GithubRef: ce49c26
+GithubSHA1: ce49c26aa5b5eee84a835e69cbb7ca572f669792
+NeedsCompilation: yes
+Packaged: 2024-02-04 17:41:09 UTC; jverbeek
+Built: R 4.3.2; x86_64-conda-linux-gnu; 2024-02-04 17:41:10 UTC; unix

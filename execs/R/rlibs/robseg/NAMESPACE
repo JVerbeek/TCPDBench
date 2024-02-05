@@ -1,0 +1,2 @@
+useDynLib(robseg)
+export(Rob_seg.std, Rob_seg, multiBinSeg, fpop_intern)

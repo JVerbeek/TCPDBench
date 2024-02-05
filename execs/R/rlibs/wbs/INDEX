@@ -1,0 +1,19 @@
+bic.penalty             Bayesian Information Criterion penalty term
+changepoints            Change-points detected by WBS or BS
+fixed.intervals         Fixed intervals
+mbic.penalty            Modified Bayes Information Criterion penalty
+                        term
+means.between.cpt       Means between change-points
+plot.sbs                Plot for an 'sbs' object
+plot.wbs                Plot for a 'wbs' object
+print.sbs               Print for an 'sbs' object
+print.wbs               Print for a 'wbs' object
+random.intervals        Random intervals
+sbs                     Change-point detection via standard Binary
+                        Segmentation
+ssic.penalty            Strengthened Schwarz Information Criterion
+                        penalty term
+wbs                     Change-point detection via Wild Binary
+                        Segmentation
+wbs-package             Wild Binary Segmentation for multiple
+                        change-point detection
