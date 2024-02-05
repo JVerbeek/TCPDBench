@@ -6,3 +6,4 @@ analysis/**
 stagedir/**
 datasets/**
 cluster-instructions.md
+logs/**
