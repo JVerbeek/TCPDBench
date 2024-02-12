@@ -1,0 +1,21 @@
+{
+	"error" : "This method has no support for multidimensional data.",
+	"command" : "/usr/lib64/R/bin/exec/R --no-echo --no-restore --no-save --slave --file=/home/janneke/TCPDBench/execs/R/cpdbench_changepoint.R --args -i /home/janneke/TCPDBench/datasets/apple.json -p MBIC -f mean -t Normal -m AMOC",
+	"script" : "/home/janneke/TCPDBench/execs/R/cpdbench_changepoint.R",
+	"script_md5" : "6175ed267f515e2958637075675272db",
+	"hostname" : "hex-portable",
+	"dataset" : "apple",
+	"dataset_md5" : "34b6b2cbcbd24b428313dc4b5f00ec92",
+	"status" : "SKIP",
+	"parameters" : {
+		"func" : "mean",
+		"max_cp" : "max",
+		"method" : "AMOC",
+		"penalty" : "MBIC",
+		"test_statistic" : "Normal"
+	},
+	"result" : {
+		"cplocations" : null,
+		"runtime" : null
+	}
+} 

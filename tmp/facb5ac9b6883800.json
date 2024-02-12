@@ -1,0 +1,35 @@
+{
+	"error" : null,
+	"command" : "/usr/lib64/R/bin/exec/R --no-echo --no-restore --no-save --slave --file=/home/janneke/TCPDBench/execs/R/cpdbench_changepointnp.R --args -i /home/janneke/TCPDBench/datasets/bitcoin.json -p MBIC -q 10",
+	"script" : "/home/janneke/TCPDBench/execs/R/cpdbench_changepointnp.R",
+	"script_md5" : "900c8687ad78bde19902400624e57d8b",
+	"hostname" : "hex-portable",
+	"dataset" : "bitcoin",
+	"dataset_md5" : "f90ff14ed1fc0c3d47d4394d25cbce93",
+	"status" : "SUCCESS",
+	"parameters" : {
+		"method" : "PELT",
+		"test.stat" : "empirical_distribution",
+		"minseglen" : 1,
+		"nquantiles" : 10,
+		"penalty" : "MBIC"
+	},
+	"result" : {
+		"cplocations" : [
+			14,
+			81,
+			91,
+			194,
+			343,
+			355,
+			366,
+			520,
+			579,
+			604,
+			648,
+			762,
+			773
+		],
+		"runtime" : 0.01238132
+	}
+} 

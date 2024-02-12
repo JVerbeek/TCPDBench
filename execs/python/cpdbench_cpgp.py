@@ -17,8 +17,10 @@ import gpflow
 import numpy as np
 import tensorflow as tf
 import sys
-from cpgp.cpgp.models import fit_GPR, make_GPR
-from cpgp.cpgp.hmc import run_hmc
+import os
+sys.path.append(os.path.expanduser("~")+"/TCPDBench/execs/python")
+print(sys.path)
+from cpgp.models import CPGP
 
 jitter = 1e-8
 # custom_config = gpflow.settings.get_settings()
@@ -35,37 +37,40 @@ from cpdbench_utils import (
     exit_success,
 )
 
-def run_cpgp(mat, params):
-    # Find best initial cp candidate out of 10 tries
-    # Set HMC priors
-    # Sample 1000 MC samples
-    results = []
-    for _ in range(10):
-        model = make_GPR(X, Y, k)
-        result = fit_GPR(model)
-        results.append((result, model)) if result["success"] else None
-    _, model = min(results)
-    model, samples, parameter_samples = run_hmc(model=model, num_samples=1000, num_burnin_steps=100)
-    return
+kernels = {"RBF": gpflow.kernels.RBF(),
+ "Linear": gpflow.kernels.Linear(),
+ "Matern52": gpflow.kernels.Matern52(),
+ "RationalQuadratic": gpflow.kernels.RationalQuadratic()
+}
 
+def run_cpgp(mat, params):
+    results = []
+    for i in range(10):
+        model = gpflow.kernels.ChangePoints(kernels=[params["kernel1"], params["kernel2"]], locations=[params["location"]])
+        cpgp = CPGP(model)
+        res = cpgp.fit(mat)
+        if res["opt"] < best:
+            best = res["opt"]
+            best_model = cpgp
+    samples, parameter_samples = best_model.sample_hyperparams()
+    return best_model.model.kernel.locations
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Wrapper for ADAGA")
+    parser = argparse.ArgumentParser(description="Wrapper for CPGP")
     parser.add_argument(
-        "-i", "--input", help="path to the input data file", required=True
+        "-i", "--input", help="path to the input data file", default="/home/janneke/TCPDBench/datasets/gdp_argentina.json"
     )
     parser.add_argument(
-        "--min_window_size", default=15
+        "--kernel1", help="Kernel one", type=str, default="RBF"
     )
     parser.add_argument(
-        "--delta", help="Threshold for the T1/T2 error", type=float, default=0.6
+        "--kernel2", help="Kernel two", type=str, default="RBF"
     )
     parser.add_argument(
-        "--kernel", help="Kernel used by ADAGA", type=str, default="RBF"
-    )
+        "--prior-scale", help="Scale for HMC prior", type=float, default=10.0)
     parser.add_argument(
-        "--batch_size", help="Batch size with which new points are added", type=int, default=15
+        "--location", help="Initial location", type=int, default=0
     )
     parser.add_argument(
         "--n_inducing_points", help="Inducing points", type=int, default=10
@@ -86,8 +91,7 @@ def main():
 
     # insert some code that runs adaga here
     parameters = make_param_dict(args, defaults)
-    regions = run_cpgp(mat, parameters)
-    locations = [[int(j) for j in list(i.values())] for i in regions.closed_windows]
+    locations = run_cpgp(mat, parameters)
     stop_time = time.time()
     runtime = stop_time - start_time
 
