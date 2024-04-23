@@ -1,0 +1,37 @@
+Initializing BVAR object
+Initializing BVAR object
+Initializing BVAR object
+Processing observation #50
+Last iteration took 0.02619767189025879 seconds
+{
+	"command": "/home/jverbeek/TCPDBench/execs/python/cpdbench_bocpdms.py -i /home/jverbeek/TCPDBench/datasets/Bfej3cofnJNWlLHaoM.json --intensity 100 --prior-a 1.0 --prior-b 1.0 --threshold 0",
+	"dataset": "Bfej3cofnJNWlLHaoM",
+	"dataset_md5": "06fc2f89ccd9026dd5f64a55942fffad",
+	"error": null,
+	"hostname": "cn84",
+	"parameters": {
+		"S1": 1,
+		"S2": 1,
+		"intensity": 100.0,
+		"intercept_grouping": null,
+		"lower_AR": 1,
+		"prior_a": 1.0,
+		"prior_b": 1.0,
+		"prior_mean_scale": 0,
+		"prior_var_scale": 1,
+		"threshold": 0,
+		"upper_AR": 3,
+		"use_timeout": false
+	},
+	"result": {
+		"cplocations": [
+			1,
+			2,
+			59
+		],
+		"runtime": 2.5848309993743896
+	},
+	"script": "/home/jverbeek/TCPDBench/execs/python/cpdbench_bocpdms.py",
+	"script_md5": "12b7d810302374a3439215d0d8747a0a",
+	"status": "SUCCESS"
+}

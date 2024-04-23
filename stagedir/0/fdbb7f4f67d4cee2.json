@@ -1,0 +1,24 @@
+{
+	"error" : null,
+	"command" : "/usr/lib/R/bin/exec/R --no-echo --no-restore --no-save --slave --file=/home/jverbeek/TCPDBench/execs/R/cpdbench_changepoint.R --args -i /home/jverbeek/TCPDBench/datasets/qT3Yx1429HThmxek.json -p BIC -f mean -t Normal -m SegNeigh -Q default",
+	"script" : "/home/jverbeek/TCPDBench/execs/R/cpdbench_changepoint.R",
+	"script_md5" : "6175ed267f515e2958637075675272db",
+	"hostname" : "cn84",
+	"dataset" : "qT3Yx1429HThmxek",
+	"dataset_md5" : "2f38108cff23e65f7b528a8f7db47d33",
+	"status" : "SUCCESS",
+	"parameters" : {
+		"Q" : 5,
+		"func" : "mean",
+		"max_cp" : "default",
+		"method" : "SegNeigh",
+		"penalty" : "BIC",
+		"test_statistic" : "Normal"
+	},
+	"result" : {
+		"cplocations" : [
+			99
+		],
+		"runtime" : 0.006047249
+	}
+} 

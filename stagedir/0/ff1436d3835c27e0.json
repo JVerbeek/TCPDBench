@@ -1,0 +1,26 @@
+{
+	"error" : null,
+	"command" : "/usr/lib/R/bin/exec/R --no-echo --no-restore --no-save --slave --file=/home/jverbeek/TCPDBench/execs/R/cpdbench_rfpop.R --args -i /home/jverbeek/TCPDBench/datasets/oPIljirDxw6U2Mq6.json -l Outlier",
+	"script" : "/home/jverbeek/TCPDBench/execs/R/cpdbench_rfpop.R",
+	"script_md5" : "95781ef9734c750d2029ef6139ca21cb",
+	"hostname" : "cn84",
+	"dataset" : "oPIljirDxw6U2Mq6",
+	"dataset_md5" : "872cfa78745702b0e77f8d6aba7bf516",
+	"status" : "SUCCESS",
+	"parameters" : {
+		"lambda" : 9.21034,
+		"lthreshold" : 3,
+		"loss" : "Outlier"
+	},
+	"result" : {
+		"cplocations" : [
+			22,
+			29,
+			45,
+			48,
+			72,
+			99
+		],
+		"runtime" : 0.0008394718
+	}
+} 

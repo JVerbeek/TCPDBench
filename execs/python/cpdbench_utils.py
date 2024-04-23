@@ -35,11 +35,6 @@ def load_dataset(filename):
     with open(filename, "r") as fp:
         data = json.load(fp)
 
-    if data["time"]["index"] != list(range(0, data["n_obs"])):
-        raise NotImplementedError(
-            "Time series with non-consecutive time axis are not yet supported."
-        )
-
     mat = np.zeros((data["n_obs"], data["n_dim"]))
     for j, series in enumerate(data["series"]):
         mat[:, j] = series["raw"]

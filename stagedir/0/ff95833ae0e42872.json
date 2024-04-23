@@ -1,0 +1,15 @@
+{
+	"command": "/home/jverbeek/TCPDBench/execs/python/cpdbench_zero.py -i /home/jverbeek/TCPDBench/datasets/zYTcZTw21miNkE0B.json",
+	"dataset": "zYTcZTw21miNkE0B",
+	"dataset_md5": "9c02c287f6aeabddd3191c84d22f88aa",
+	"error": null,
+	"hostname": "cn84",
+	"parameters": {},
+	"result": {
+		"cplocations": [],
+		"runtime": 7.152557373046875e-07
+	},
+	"script": "/home/jverbeek/TCPDBench/execs/python/cpdbench_zero.py",
+	"script_md5": "95b65ddd5669b41385966a4aad387118",
+	"status": "SUCCESS"
+}

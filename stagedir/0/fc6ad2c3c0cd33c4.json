@@ -1,0 +1,21 @@
+{
+	"error" : null,
+	"command" : "/usr/lib/R/bin/exec/R --no-echo --no-restore --no-save --slave --file=/home/jverbeek/TCPDBench/execs/R/cpdbench_wbs.R --args -i /home/jverbeek/TCPDBench/datasets/YfECpTJO88Ueqjaf.json -K default -p SSIC -g true",
+	"script" : "/home/jverbeek/TCPDBench/execs/R/cpdbench_wbs.R",
+	"script_md5" : "155041b2e01ba0b7ece7753cb145ea9a",
+	"hostname" : "cn84",
+	"dataset" : "YfECpTJO88Ueqjaf",
+	"dataset_md5" : "db9323150b7f9702d7e5dce93f64ae2f",
+	"status" : "SUCCESS",
+	"parameters" : {
+		"M" : 5000,
+		"rand.intervals" : true,
+		"Kmax" : 50,
+		"integrated" : true,
+		"penalty" : "SSIC"
+	},
+	"result" : {
+		"cplocations" : [],
+		"runtime" : 0.0466907
+	}
+} 

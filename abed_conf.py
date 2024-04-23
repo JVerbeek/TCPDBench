@@ -63,53 +63,11 @@ BUILD_CMD = "make all"  # Build command
 ##############################################################################
 #                      Experiment parameters and settings                    #
 ##############################################################################
-DATADIR = "datasets/cpgp-bench"
+DATADIR = "../changepoint-gp/experiments/datasets/jsons"
 EXECDIR = "execs"
 
-DATASETS = [
-    "apple",
-    "bank",
-    "bee_waggle_6",
-    "bitcoin",
-    "brent_spot",
-    "businv",
-    "centralia",
-    "children_per_woman",
-    "co2_canada",
-    "construction",
-    "debt_ireland",
-    "gdp_argentina",
-    "gdp_croatia",
-    "gdp_iran",
-    "gdp_japan",
-    "global_co2",
-    "homeruns",
-    "iceland_tourism",
-    "jfk_passengers",
-    "lga_passengers",
-    "measles",
-    "nile",
-    "occupancy",
-    "ozone",
-    "quality_control_1",
-    "quality_control_2",
-    "quality_control_3",
-    "quality_control_4",
-    "quality_control_5",
-    "rail_lines",
-    "ratner_stock",
-    "robocalls",
-    "run_log",
-    "scanline_126007",
-    "scanline_42049",
-    "seatbelts",
-    "shanghai_license",
-    "uk_coal_employ",
-    "unemployment_nl",
-    "usd_isk",
-    "us_population",
-    "well_log",
-]
+DATASETS = ['7OfdGjD2K7Mn4ZRgij', 'JyKagQEL4O8vbLzjyU', 'VbXYmJUByZe5', 'a0tPNurE6MkB', '157eL0tVnA5p', 'z24c3zw2pmiEkX50r7', 'uEF21fYC2FplDCe7H0', 'ClvS4zrPpZyyoJRwvq', 'EDhpxCTgAsmj', 'KsJ5FDQpkHnmwNUWH5', 'FHGnXkNKv3Puc', 'Bfej3cofnJNWlLHaoM', 'hw4B8uv5C3foVyHV', 'WQ0ur1B62xiF5OAj', '0NTLit9Xa9uJQ5vy8', '5syQ8zZeboXbsD0Kn5', 'oDplXGrzfxYgUldMgQ', 'wLVf8Jf5nkW3MMwOc', '38WcDpPpeX92GZT6G', 'RgpewTN49TsFPqB8QH', 'oPIljirDxw6U2Mq6', '1Jw79fL7tdnGa5X', 'sn8BjkICgsQ3dxk4', 'M3KnoQyLRbYIDMPn', '7OsdeD2j7Cz4wgii', '6VJgbrxh3Rw7TMcwcx', 'yvGrWH38jMJuVtj', 'ex6VRl3U0Du3OwPr', 'fv9YWyFdEbspP', 'zYTcZTw21miNkE0B', 'gbHmTJEzCZdMlnU3', 'oPld4r7MxsUwNMqc', 'YfECpTJO88Ueqjaf', 'QsAcu4uvfU5niL7U', 'NEzx6XQhVpWWr8F9', 'z2c3Tw20mCkXF0rf', 'dy4QYwPf0fBKxijh', 'dC4QawPC0kBKoijV', 'n3qadfLkP4r0JMz0', 'qT3Yx1429HThmxek']
+ 
 
 DATASET_NAMES = {k: k for k in DATASETS}
 
@@ -390,21 +348,21 @@ COMMANDS = {
         "-i {datadir}/{dataset}.json"
     ),
     "default_adaga_rbf": (
-        ". /home/janneke/miniconda3/etc/profile.d/conda.sh &&"
+        ". /home/jverbeek/miniconda3/etc/profile.d/conda.sh &&"
         "conda activate adaga && "
         "python {execdir}/python/cpdbench_adaga.py "
         "-i {datadir}/{dataset}.json --delta 0.6 --min_window_size 15 " 
         "--batch_size 1 --kernel RBF && conda deactivate"
     ),
     "default_adaga_linear": (
-        ". /home/janneke/miniconda3/etc/profile.d/conda.sh &&"
+        ". /home/jverbeek/miniconda3/etc/profile.d/conda.sh &&"
         "conda activate adaga && "
         "python {execdir}/python/cpdbench_adaga.py "
         "-i {datadir}/{dataset}.json --delta 0.6 --min_window_size 15 " 
         "--batch_size 1 --kernel Linear && conda deactivate"
     ),
     "default_adaga_matern": (
-        ". /home/janneke/miniconda3/etc/profile.d/conda.sh &&"
+        ". /home/jverbeek/miniconda3/etc/profile.d/conda.sh &&"
         "conda activate adaga && "
         "python {execdir}/python/cpdbench_adaga.py "
         "-i {datadir}/{dataset}.json --delta 0.6 --min_window_size 15 " 

@@ -377,17 +377,14 @@ py_venvs: venv_bocpdms venv_rbocpdms venv_adaga
 
 venv_bocpdms: ./execs/python/bocpdms/venv
 
+venv_adaga: ./execs/python/adaga/venv
 ./execs/python/adaga/venv:
-	cd execs/python/adaga && conda create -n adaga && \
+	cd ${HOME}/TCPDBench/execs/python/adaga && conda create -n adaga && \
 		conda activate adaga && pip install wheel && \
 		pip install -r requirements.txt && conda deactivate
 
 ./execs/python/bocpdms/venv:
-<<<<<<< HEAD
-	cd execs/python/bocpdms && python -m venv venv && \
-=======
 	cd ${HOME}/TCPDBench/execs/python/bocpdms && python -m venv venv && \
->>>>>>> 4e93fef71043771f27571b66ebf549981446c981
 		source venv/bin/activate && pip install wheel && \
 		pip install -r requirements.txt
 
